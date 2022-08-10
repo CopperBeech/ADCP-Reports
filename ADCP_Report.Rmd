@@ -68,7 +68,7 @@ depths <- unique(dat$bin_height_above_sea_floor_m)
 year <- year(depl_date)
 
 # read in metadata & extract useful params
-metadata <- adcp_read_nsdfa_metadata("Z:/Coastal Monitoring Program/ADCP/Side Lobe Trimmed/Process Data/tracking/2022-03-17 - NSDFA Tracking Sheet.xlsx") %>%
+metadata <- adcp_read_nsdfa_metadata("Z:/Coastal Monitoring Program/ADCP/Side Lobe Trimmed/2022-07-12_Process/tracking/2022-03-17 - NSDFA Tracking Sheet.xlsx") %>%
   filter(Station_Name == station, Depl_Date == depl_date)
 
 waterbody <- metadata$Waterbody

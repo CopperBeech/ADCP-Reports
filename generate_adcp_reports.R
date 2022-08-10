@@ -9,6 +9,7 @@ library(readxl)
 
 report <- here("ADCP_Report.Rmd")
 
+# Use this code to generate all reports using the report tracker.
 tracker <- read_xlsx("Z:/Coastal Monitoring Program/ADCP/Side Lobe Trimmed/Reports/ADCP_Report_Tracker.xlsx")
 # tracker <- read_xlsx("Y:/Coastal Monitoring Program/ADCP/Side Lobe Trimmed/Reports/ADCP_Report_Tracker.xlsx")
 tracker <- tracker %>%
@@ -17,6 +18,11 @@ tracker <- tracker %>%
 depl_date <- tracker$Depl_Date[]
 station <- tracker$Open_Data_Station[]
 county <- tracker$County[]
+
+# Alternatively, use this code to generate selected reports.
+depl_date <- c()
+station <- c()
+county <- c()
 
 
 # SECTION 2: Generate Reports --------------------------------------------------
